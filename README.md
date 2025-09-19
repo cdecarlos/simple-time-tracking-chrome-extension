@@ -1,109 +1,107 @@
-# Simple Time Tracking - Extensión de Chrome
+# Simple Time Tracking - Chrome Extension
 
-Una extensión de Chrome simple y efectiva para hacer seguimiento del tiempo dedicado a diferentes tareas.
+A simple and effective Chrome extension to track time spent on different tasks.
 
-## Características
+## Features
 
-- ⏱️ Cronómetro con funciones de iniciar, pausar y detener
-- 📝 Seguimiento de tareas específicas
-- 📊 Historial diario de actividades
-- 💾 Persistencia de datos entre sesiones
-- 🎨 Interfaz limpia y fácil de usar
+- ⏱️ Timer with start and stop functions
+- 📊 Daily activity history
+- 💾 Data persistence between sessions
+- 🎨 Clean and easy-to-use interface
 
-## Estructura de Archivos
+### Usage
+
+1. Click on the extension icon in the toolbar
+2. Type the task you're working on and click "Start" to begin the timer
+3. Use "Stop" to finish and save to history
+4. Type the new task you're working on and click "Start" to begin the timer for the new task without having to stop the previous one
+
+## Functionality
+
+### Timer
+- Displays time in HH:MM:SS format
+- Maintains state between browser sessions
+- Start and stop functions
+
+### Task Tracking
+- Text field to describe the current task
+- Display of the active task
+- Automatic state saving
+
+### History
+- Shows all sessions from the current day
+- Each history record includes start time, end time, duration, and task description
+
+### Permissions
+
+- `storage`: To save timer and history data
+- `activeTab`: For basic access to the current tab
+
+## Installation
+
+### For development:
+
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable "Developer mode" in the top right corner
+3. Click on "Load unpacked extension"
+4. Select the `simple-time-tracking-chrome-extension` folder
+
+### For distribution:
+
+TODO: Add instructions for publishing on Chrome Web Store
+
+## Development
+
+### File Structure
 
 ```
 simple-time-tracking/
-├── manifest.json         # Configuración de la extensión
-├── popup.html            # Interfaz del popup
-├── popup.css             # Estilos del popup
-├── popup.js              # Lógica del popup
 ├── background.js         # Service worker
-├── content.js            # Script de contenido
-├── icons/                # Iconos de la extensión
-│   ├── icon16.png
-│   ├── icon32.png
-│   ├── icon48.png
-│   └── icon128.png
-└── README.md
+├── content.js            # Content script
+├── LICENSE               # License file
+├── manifest.json         # Extension configuration
+├── popup.css             # Popup styles
+├── popup.html            # Popup interface
+├── popup.js              # Popup logic
+├── README.md
+├── icons/                # Extension icons
+  ├── icon16.png
+  ├── icon32.png
+  ├── icon48.png
+  └── icon128.png
 ```
 
-## Instalación
+### Main files:
 
-### Para desarrollo:
+- **manifest.json**: Extension configuration and permissions
+- **popup.html/css/js**: Popup user interface
+- **background.js**: Service worker for background functions
+- **content.js**: Script that runs on web pages
 
-1. Abre Chrome y ve a `chrome://extensions/`
-2. Activa el "Modo de desarrollador" en la esquina superior derecha
-3. Haz clic en "Cargar extensión sin empaquetar"
-4. Selecciona la carpeta `simple-time-tracking`
+### Customization:
 
-### Para distribución:
-
-1. Empaqueta la extensión desde `chrome://extensions/`
-2. Sube el archivo `.crx` a Chrome Web Store
-
-## Uso
-
-1. Haz clic en el icono de la extensión en la barra de herramientas
-2. Escribe la tarea en la que estás trabajando
-3. Haz clic en "Iniciar" para comenzar el cronómetro
-4. Usa "Pausar" para pausar temporalmente
-5. Usa "Detener" para finalizar y guardar en el historial
-
-## Funcionalidades
-
-### Cronómetro
-- Muestra tiempo en formato HH:MM:SS
-- Mantiene el estado entre sesiones del navegador
-- Funciones de iniciar, pausar y reanudar
-
-### Seguimiento de Tareas
-- Campo de texto para describir la tarea actual
-- Visualización de la tarea activa
-- Guardado automático del estado
-
-### Historial
-- Muestra todas las sesiones del día actual
-- Formato legible de duración y hora
-- Limpieza automática de datos antiguos (30 días)
-
-## Permisos
-
-- `storage`: Para guardar datos de cronómetro e historial
-- `activeTab`: Para acceso básico a la pestaña actual
-
-## Desarrollo
-
-### Archivos principales:
-
-- **manifest.json**: Configuración y permisos de la extensión
-- **popup.html/css/js**: Interfaz de usuario del popup
-- **background.js**: Service worker para funciones en segundo plano
-- **content.js**: Script que se ejecuta en páginas web
-
-### Personalización:
-
-1. Modifica `popup.css` para cambiar la apariencia
-2. Ajusta `popup.js` para añadir nuevas funcionalidades
-3. Actualiza `manifest.json` para nuevos permisos o configuraciones
+1. Modify `popup.css` to change the appearance
+2. Adjust `popup.js` to add new functionalities
+3. Update `manifest.json` for new permissions or configurations
 
 ## TODO
 
-- [ ] Añadir iconos personalizados
-- [ ] Implementar exportación de datos
-- [ ] Añadir categorías de tareas
-- [ ] Crear estadísticas semanales/mensuales
-- [ ] Implementar notificaciones
-- [ ] Añadir shortcuts de teclado
+- [ ] Add instructions for publishing on Chrome Web Store
+- [ ] Add custom icons
+- [ ] Implement data export
+- [ ] Add task categories
+- [ ] Create weekly/monthly statistics
+- [ ] Implement notifications
+- [ ] Add keyboard shortcuts
 
-## Contribución
+## Contribution
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for more details.

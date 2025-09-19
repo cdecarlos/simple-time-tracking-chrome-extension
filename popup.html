@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Time Tracking</title>
+	<link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Time Tracking</h1>
+
+		<div class="timer-section">
+			<div class="timer-display" id="timerDisplay">00:00:00</div>
+			<input type="text" id="taskInput" placeholder="¿En qué vas a trabajar?" class="task-input">
+			<div class="controls">
+				<button id="startBtn" class="btn btn-start">Iniciar</button>
+				<button id="stopBtn" class="btn btn-stop" disabled>Detener</button>
+			</div>
+			<div class="current-task-label">Tarea actual:</div>
+			<div class="current-task" id="currentTask">No hay tarea en ejecución</div>
+		</div>
+
+		<div class="history-section">
+			<div class="history-header">
+				<h3>Historial de hoy</h3>
+				<button id="clearHistoryBtn" class="btn btn-clear" title="Limpiar historial">✕</button>
+			</div>
+			<div id="todayHistory" class="history-list"></div>
+		</div>
+	</div>
+
+	<script src="popup.js"></script>
+</body>
+
+</html>
