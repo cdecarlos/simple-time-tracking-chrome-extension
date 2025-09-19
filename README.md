@@ -107,4 +107,3 @@ simple-time-tracking/
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-# simple-time-tracking-chrome-extension
